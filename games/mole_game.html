@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="/static/css/mycss.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+	    <link rel="shortcut icon" href="/static/icon.ico" type="image/x-icon">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+		<title>Game</title>
+	
+		<style type="text/css">
+			body{
+				width: 100%;
+				height:100%;
+				overflow: hidden;
+			}
+
+			.mole{
+				background-color: rgb(255, 127, 39);
+				border-radius: 100px 100px 0px 0px;
+				height: 100%;
+				width: 10%;
+				position: absolute;
+				top: 100%; 			
+				/*100% away from top*/
+				background-image: url(media/mole_game/player.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+			} 
+			.left-ear{
+				background-color: rgb(255, 127, 39);
+				border-radius: 100px;
+				position: absolute;
+				left: 0px;
+				float:left;
+				width: 30%;
+				padding-top: 30%;
+				z-index: -1;
+			}
+			.right-ear{
+				background-color: rgb(255, 127, 39);
+				border-radius: 100px;
+				position: absolute;
+				right: 0px;
+				float:right;
+				width: 30%;
+				padding-top: 30%;
+				z-index: -1;
+			}
+
+			#mole1{
+				left: 10%;
+			}
+			#mole2{
+				left: 45%;
+			}
+			#mole3{
+				left: 80%
+			}
+
+			.score{
+				display: none;
+				color: green;
+				position: absolute;
+				right: 10px;
+				font-family: arial;
+				font-size: 45px;
+				z-index: 1;
+			}
+			.try-again{
+				/*display: none;*/
+				left: 50%;
+				top: 60%;
+				font-family: arial;
+				padding: 4px;
+				font-size: 60px;
+				position: fixed;
+				z-index: 1;
+				color:  #717d7e ;
+				/*background-color:  #717d7e ;*/
+			}
+
+			#mybar{
+				color: red;
+				z-index: -3;
+			}
+
+			.rools{
+				left: 10%;
+				text-align: center;
+				top: 25%;
+				font-family: arial;
+				padding: 4px;
+				font-size: 40px;
+				position: fixed;
+				z-index: 1;
+				color:  #717d7e ;				
+			}
+		</style>
+		<script>
+			jQuery(document).ready(function(){
+
+				var add = 0;
+				var over = false;
+	
+				function GameOver(){
+					jQuery('.rools').css('display', 'block');
+					jQuery('.mole').animate({'top':'100%'}, 300);
+					jQuery('.score').html("Game Over");
+					over = true;
+					jQuery('.score').css('color', 'red');
+					jQuery('.try-again').css('display','block');
+					jQuery('.try-again').css('left','45%');
+				}
+
+				function start(){
+					jQuery('.rools').css('display', 'none');
+					jQuery('.score').css('display', 'block');
+					jQuery('.score').css('color', 'green');
+					jQuery('.score').html('Score : '+add);
+					jQuery('.try-again').css('display','none');
+					jQuery('.try-again').html('Try again');
+
+					jQuery('.mole').animate({'top':'5%'}, 2000, function(){
+						// reaches the top
+						jQuery('.mole').stop().animate({'top':'100%'},300, function(){
+							GameOver();
+						});
+					});
+				}
+				// start();
+
+				jQuery('.try-again').click(function(){
+					over = false;
+					jQuery('.try-again').css('display','none');
+					add=0;
+					start();
+				});
+
+				jQuery('.mole').hover(function(){
+					if (over==false){
+						jQuery(this).css('background-image','url(media/mole_game/player_uwa.png)');
+
+						jQuery(this).stop().animate({'top':'100%'},300, function(){
+							add=add+1;
+							jQuery('.score').html('Score : '+add);
+							jQuery(this).css('background-image','url(media/mole_game/player.png)');
+
+							jQuery(this).animate({'top':'5%'}, 2000, function(){
+								jQuery('.mole').stop().animate({'top':'100%'},300, function(){
+									GameOver();
+								});
+							});
+
+						});
+					}
+				})
+
+			}); 
+
+		</script>
+
+
+	</head>
+	<body style="overflow:hidden;">
+		<section class="hero is-black " id="mybar" >
+		    <nav class="navbar">
+		      <div class="container">
+		        <div class="navbar-brand">
+		          <a class="navbar-item" href="../index.html">
+		              <h1 class="subtitle" style="font-family: Helvetica;text;text-emphasis-style: filled; ">Codez</h1>
+		          </a>
+		          <span class="navbar-burger burger" data-target="navbarMenuHeroA" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active'); document.querySelector('.navbar-burger').classList.toggle('is-active');">
+		            <span> </span>
+		            <span></span>
+		            <span></span>
+		          </span>
+		          <div id="navbarMenuHeroA" class="navbar-menu">
+		           <div class="navbar-end">
+		                <a id="texttovoice" class="navbar-item  "  href="games/mole_game.html"><span class="icon is-small"><i class="fas fa-gamepad"></i></span><span> &nbsp;Games</span>  </a>
+		            </div>
+		          </div>
+		          </div>
+		          </div>
+		        </div>
+		      </div>
+		    </nav>
+		</section>
+		
+
+		<div class="rools column">
+			<h2>Haver you'r mouse or fingr eover the moles to stop them, don't let the reach the top</h2>
+		</div>
+
+		<a class="try-again">Start </a>
+
+
+		<div class="score">Score : 0</div>
+		<div class="mole" id = "mole1">
+			<div class="right-ear"></div>
+			<div class="left-ear"></div>
+		</div>
+		<div class="mole" id = "mole2">
+			<div class="right-ear"></div>
+			<div class="left-ear"></div>
+		</div>
+		<div class="mole" id = "mole3">
+			<div class="right-ear"></div>
+			<div class="left-ear"></div>
+		</div>
+
+	</body>
+</html>
