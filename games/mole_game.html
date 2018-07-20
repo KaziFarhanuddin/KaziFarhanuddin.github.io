@@ -112,7 +112,6 @@
 				function GameOver(){
 					// jQuery('.rools').css('display', 'block');
 					jQuery('.mole').animate({'top':'100%'}, 300);
-					jQuery('.score').html("Game Over");
 					over = true;
 					jQuery('.score').css('color', 'red');
 					jQuery('.try-again').css('display','block');
@@ -151,7 +150,7 @@
 
 						jQuery(this).stop().animate({'top':'100%'},300, function(){
 							add=add+1;
-							n_speed=n_speed-70;
+							n_speed=n_speed-40;
 							jQuery('.score').html('Score : '+add);
 							jQuery(this).css('background-image','url(media/mole_game/player.png)');
 
