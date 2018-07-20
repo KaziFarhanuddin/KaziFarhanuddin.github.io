@@ -6,13 +6,14 @@
     	<link rel="stylesheet" href="/static/css/mycss.css">
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
-	    <link rel="shortcut icon" href="/static/icon.ico" type="image/x-icon">
+	    <!-- <link rel="shortcut icon" href="/static/icon.ico" type="image/x-icon"> -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 		<title>Game</title>
 	
 		<style type="text/css">
+		html, body {margin: 0; height: 100%; overflow: hidden}
 			body{
 				width: 100%;
 				height:100%;
@@ -74,7 +75,7 @@
 			.try-again{
 				/*display: none;*/
 				left: 50%;
-				top: 60%;
+				top: 50%;
 				font-family: arial;
 				padding: 4px;
 				font-size: 60px;
@@ -95,7 +96,7 @@
 				top: 25%;
 				font-family: arial;
 				padding: 4px;
-				font-size: 40px;
+				font-size: 20px;
 				position: fixed;
 				z-index: 1;
 				color:  #717d7e ;				
@@ -108,13 +109,14 @@
 				var over = false;
 	
 				function GameOver(){
-					jQuery('.rools').css('display', 'block');
+					// jQuery('.rools').css('display', 'block');
 					jQuery('.mole').animate({'top':'100%'}, 300);
 					jQuery('.score').html("Game Over");
 					over = true;
 					jQuery('.score').css('color', 'red');
 					jQuery('.try-again').css('display','block');
-					jQuery('.try-again').css('left','45%');
+					jQuery('.try-again').css('left','40%');
+					jQuery('.try-again').css('top','45%');
 				}
 
 				function start(){
@@ -181,7 +183,7 @@
 		          </span>
 		          <div id="navbarMenuHeroA" class="navbar-menu">
 		           <div class="navbar-end">
-		                <a id="texttovoice" class="navbar-item  "  href="games/mole_game.html"><span class="icon is-small"><i class="fas fa-gamepad"></i></span><span> &nbsp;Games</span>  </a>
+		                <a id="texttovoice" class="navbar-item  "  href="mole_game.html"><span class="icon is-small"><i class="fas fa-gamepad"></i></span><span> &nbsp;Games</span>  </a>
 		            </div>
 		          </div>
 		          </div>
