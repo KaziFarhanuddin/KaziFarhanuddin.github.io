@@ -107,6 +107,7 @@
 
 				var add = 0;
 				var over = false;
+				var n_speed = 2000;
 	
 				function GameOver(){
 					// jQuery('.rools').css('display', 'block');
@@ -127,7 +128,7 @@
 					jQuery('.try-again').css('display','none');
 					jQuery('.try-again').html('Try again');
 
-					jQuery('.mole').animate({'top':'5%'}, 2000, function(){
+					jQuery('.mole').animate({'top':'5%'}, n_speed, function(){
 						// reaches the top
 						jQuery('.mole').stop().animate({'top':'100%'},300, function(){
 							GameOver();
@@ -149,10 +150,11 @@
 
 						jQuery(this).stop().animate({'top':'100%'},300, function(){
 							add=add+1;
+							n_speed=n_speed-50;
 							jQuery('.score').html('Score : '+add);
 							jQuery(this).css('background-image','url(media/mole_game/player.png)');
 
-							jQuery(this).animate({'top':'5%'}, 2000, function(){
+							jQuery(this).animate({'top':'5%'}, n_speed, function(){
 								jQuery('.mole').stop().animate({'top':'100%'},300, function(){
 									GameOver();
 								});
