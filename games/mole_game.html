@@ -141,6 +141,7 @@
 					over = false;
 					jQuery('.try-again').css('display','none');
 					add=0;
+					n_speed=2000;		
 					start();
 				});
 
@@ -150,7 +151,7 @@
 
 						jQuery(this).stop().animate({'top':'100%'},300, function(){
 							add=add+1;
-							n_speed=n_speed-50;
+							n_speed=n_speed-70;
 							jQuery('.score').html('Score : '+add);
 							jQuery(this).css('background-image','url(media/mole_game/player.png)');
 
