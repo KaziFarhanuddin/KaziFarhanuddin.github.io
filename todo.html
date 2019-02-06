@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>UniversalProgrammer</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-<body>
-
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  </head>
+  <body>
 <style>
+
 body {
     font-family: "Lato", sans-serif;
 }
@@ -94,7 +93,7 @@ function closeNav() {
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">Home</a>
-  <a href="ToDo.html">ToDoList</a>
+  <a href="todo.html">ToDoList</a>
   <a href="old_7_oct_2018/index.html">Old Home</a>
   <a href="python/index.html"  style="min-width: 250px" >
     <img class="mynavimg" src="custom/img/python.jpg" > 
@@ -123,10 +122,24 @@ function closeNav() {
     </span>
   </nav>
 </div>
-<hr style="border: 1px;background-color:#eeeeee;padding: 0px;margin: 0px;width: 100%">
 
-<h1>The site is under construction</h1>
-<h1>You can chose Python and Redhat from menu </h1>
-
-</body>
+  <section class="section">
+    <div class="container">
+	<center>
+		<h1 class="title">To Do List</h1>
+		<input type="text" class="input" style="width:40%" name="input" required id="input">
+		<button id="adder" class="button is-success">Add</button>
+        <br>
+        <br>
+        <button class="button is-danger" onClick = "Clear()">Clear</button>
+        <br>
+        <br>
+		<ul id="toDo">
+		
+		</ul>
+	</center>
+    </div>
+    <script src="js.js"></script>
+  </section>
+  </body>
 </html>
