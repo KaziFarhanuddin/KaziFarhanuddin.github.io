@@ -5,6 +5,24 @@ var text;
 let data = localStorage.getItem('todo')
 var jsonObj
 
+// This function initilises list on window
+function Initilisar() {
+    list.forEach((element, i) => {
+        li = document.createElement('a')
+        text = document.createTextNode(element)
+        li.setAttribute("draggable","true")
+        li.appendChild(text)
+
+        if(jsonObj.done[i]){
+            li.setAttribute('class', 'mylist collection-item active')
+        }
+        else {
+            li.setAttribute('class', 'mylist collection-item')
+        }
+        ul.insertBefore(li, ul.firstChild)
+    });
+}
+
 // Reteving data if present or initilising json object
 if(!data){
     jsonObj = {
@@ -15,22 +33,39 @@ if(!data){
 else{
     jsonObj = JSON.parse(data)
     list = jsonObj.list
-    list.forEach((element, i) => {
-        li = document.createElement('a')
-        text = document.createTextNode(element)
-        li.setAttribute("draggable","true")
-        li.appendChild(text)
-
-        if(jsonObj.done[i]){
-            li.setAttribute('class', 'collection-item active')
-        }
-        else {
-            li.setAttribute('class', 'collection-item')
-        }
-        ul.insertBefore(li, ul.firstChild)
-    });
+    Initilisar()
 }
 
+// Remove done once
+var RmList = [];
+function RemoveDoen() {
+    list = jsonObj.list
+    list.forEach((element, i) => {
+        if(jsonObj.done[i]==1){
+            RmList.unshift(i)
+         }
+    });
+    RmList.forEach( function(element) {
+        jsonObj.done.splice(element, 1)
+        jsonObj.list.splice(element, 1)
+    });
+    localStorage.setItem('todo', JSON.stringify(jsonObj))
+
+    while (ul.hasChildNodes()) {
+        ul.removeChild(ul.lastChild);
+    }
+    Initilisar()
+}    
+
+// Remove all
+function RemoveAll() {
+    while (ul.hasChildNodes()) {
+        ul.removeChild(ul.lastChild);
+    }
+    jsonObj.done = []
+    jsonObj.list = []
+    localStorage.clear()
+}
 
 // Allow user to change 
 var moving;
@@ -41,7 +76,7 @@ ul.addEventListener('dragstart', (e)=>{
 })
 ul.addEventListener('dragleave', (e)=>{
     if(!(moving == e.target)){
-        if(e.target.className == 'collection-item' || e.target.className == 'collection-item active'){
+        if(e.target.className == 'mylist collection-item' || e.target.className == 'mylist collection-item active'){
             e.preventDefault()
             
             movingIndex = jsonObj.list.indexOf(moving.innerHTML)
@@ -68,7 +103,7 @@ let newTask = document.getElementById('newTask')
 document.getElementById('addbtn').addEventListener('click', (e) => {
     e.preventDefault()
     li = document.createElement('a')
-    li.setAttribute('class', 'collection-item')
+    li.setAttribute('class', 'mylist collection-item')
     text = document.createTextNode(newTask.value)
     li.appendChild(text)
     li.setAttribute("draggable","true")
@@ -85,12 +120,12 @@ document.getElementById('list').addEventListener('dblclick', (e) => {
     if(e.target.className.indexOf('active') > -1){
         jsonObj.done[jsonObj.list.indexOf(e.target.innerHTML)] = 0
         localStorage.setItem('todo', JSON.stringify(jsonObj))
-        e.target.className = 'collection-item '
+        e.target.className = 'mylist collection-item '
     } 
     else{
         jsonObj.done[jsonObj.list.indexOf(e.target.innerHTML)] = 1
         localStorage.setItem('todo', JSON.stringify(jsonObj))
-        e.target.className = 'collection-item active'
+        e.target.className = 'mylist collection-item active'
     }
 } )
 
