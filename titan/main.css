@@ -9,7 +9,7 @@ h3, h4 {
     color: #4e5269;
 }
 hr{
-    color: #E1E8EE;
+    color: #efefef;
 }
 
 #main-img{
@@ -127,6 +127,9 @@ hr{
     width: 3rem;
     height: 2rem;
     border: 0px;
+}
+.no_of_product{
+  background:#fff;
 }
 .no_of_product_btn {
     border: 1px solid #eee;
