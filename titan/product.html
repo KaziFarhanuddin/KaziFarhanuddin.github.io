@@ -14,65 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    .parallax-container {
-      height: 500px;
-    }
-
-    .nav-itm:hover {
-      background: rgb(48, 45, 45);
-    }
-
-    .mobal-nav-icon {
-      margin-top: 12px;
-    }
-    .parallax-row-container{
-      width: 70%;
-    }
-
-    @media only screen and (min-width: 600px) and (max-width: 992px) { 
-      .card-image{
-        height: 420px;  
-      }
-    }
-
-    @media only screen and (min-width: 600px) { 
-      .card-image{
-        height: 380px;  
-      }
-    }
-
-    @media only screen and (max-width: 600px) {
-      .card-image{
-        height: 240px;
-      }
-      .parallax-container {
-        height: 240px;
-      }
-      .parallax-image{
-        width: 100%;
-      }
-      .parallax-row-container{
-          width: 99%;
-      }
-    }
-
-    .card-content{
-      height:150px
-    }
-    .col{
-      padding: 5px !important;
-    }
-    .list a{
-        color: rgba(0, 0, 0, 0.589);
-    }
-    .list a i{
-        color: rgb(177, 177, 44);
-    }
-
-
-  </style>
-
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
@@ -85,19 +27,21 @@
         <!-- LOGO -->
       </a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      
-      
-      <a href="#" data-target="mobile-demo" style="margin-right: 10px;" class="right"><i class="material-icons">shopping_cart</i></a>
-      <a class="waves-effect waves-light modal-trigger right" href="#modal1"><i class="material-icons" style="margin-right: 15px;margin-left: 15px;">search</i></a>
 
-        <ul class="right hide-on-med-and-down">
-          <!-- <li><a href="sass.html">Sass</a></li> -->
-          
-          <li><a class="nav-itm" href='/accounts/login/'> <i class="material-icons left">watch</i>Watches</a></li>
-          <li><a class="nav-itm" href='/accounts/login/'> <i class="material-icons left">brush</i>Accessories</a></li>
-          
-          
-        </ul>
+
+      <a href="#" data-target="mobile-demo" style="margin-right: 10px;" class="right"><i
+          class="material-icons">shopping_cart</i></a>
+      <a class="waves-effect waves-light modal-trigger right" href="#modal1"><i class="material-icons"
+          style="margin-right: 15px;margin-left: 15px;">search</i></a>
+
+      <ul class="right hide-on-med-and-down">
+        <!-- <li><a href="sass.html">Sass</a></li> -->
+
+        <li><a class="nav-itm" href='/accounts/login/'> <i class="material-icons left">watch</i>Watches</a></li>
+        <li><a class="nav-itm" href='/accounts/login/'> <i class="material-icons left">brush</i>Accessories</a></li>
+
+
+      </ul>
     </div>
   </nav>
 
@@ -116,236 +60,375 @@
 
   </ul>
   <!-- Nave bar End -->
-<!-- Search pop -->
+  <!-- Search pop -->
   <!-- Modal Structure -->
-  <div id="modal1" class="modal" >
-      <form class="modal-content">
-        <h4>Search</h4>
-        <input type="text" placeholder="Search">
-      </form>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancle</a>
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Search</a>
-      </div>
+  <div id="modal1" class="modal">
+    <form class="modal-content">
+      <h4>Search</h4>
+      <input type="text" placeholder="Search">
+    </form>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancle</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Search</a>
+    </div>
   </div>
-<!-- End Search pop -->
+  <!-- End Search pop -->
 
-<!-- Product -->
-  <section id="content" class="container">
+  <section class="container">
 
     <div style="height: 150px;"></div>
+    <!-- Product -->
 
     <div class="row" style="margin: 20px;">
-            <div class="col s12 m6 l6">
-                    <img class="materialboxed" style="width: 100%;" src="https://cdn.pixabay.com/photo/2018/09/22/20/43/clock-3696113_960_720.jpg">
-                    <div class="row">
-                        <div class="col s2 m2 l2">                                
-                            <img class="materialboxed" style="width:100%" src="https://cdn.pixabay.com/photo/2015/08/06/00/31/watch-877286_960_720.jpg">
-                        </div>
-                        <div class="col s2 m2 l2">
-                            <img class="materialboxed" style="width:100%" src="https://cdn.pixabay.com/photo/2018/09/22/20/43/clock-3696113_960_720.jpg">
-                        </div>
-                            
-                        <div class="col s2 m2 l2">
-                            <img class="materialboxed" style="width:100%" src="https://cdn.pixabay.com/photo/2014/10/03/14/15/watch-471761_960_720.jpg">
-                            
-                        </div>
-                        <div class="col s2 m2 l2">
-                            <img class="materialboxed" style="width:100%" src="https://cdn.pixabay.com/photo/2018/09/22/20/43/clock-3696118_960_720.jpg">
-
-                        </div>
-                    </div>
-            </div>
-            <div class="col s12 m6 l6">
-                <div style="margin: 0px;padding: 0px 10px;">
-
-                    <h3 >Demo Products page</h3>
-                    <div>
-                        <h5>
-                            ₹ 12000
-                        </h5>
-                    </div>
-                    <p>
-                        This is some discription bout the watch
-                        And some text
-                    </p>
-                    <br>
-                    <div style="width: 40%;">
-                        <h6>
-                            No of
-                            <input min="1" value="1" type="number">
-                        </h6>
-                    </div>
-                    <br>
-                    <br>
-                    <button class="btn waves-effect waves-light btn-large  light-green ">Buy</button>
-                    <br><br>
-                    <button class="btn waves-effect waves-light grey">Add to cart</button>
-
-                </div>
-            </div>
+      <!-- Product image -->
+      <div class="col s12 m6 l6">
+        <div class="image-container">
+          <img class="materialboxed" id="main-img"
+          src="https://cdn.pixabay.com/photo/2018/09/22/20/43/clock-3696113_960_720.jpg">
+          <div class="image-bottom-right"><img src="https://static.vecteezy.com/system/resources/previews/000/185/733/original/sale-poster-backgorund-in-red-with-sticker-style-vector.jpg" style="width: 64px;height: 40px"></div>        
         </div>
         <br>
-        <br>        <br>
-        <br>        <br>
-        <br>
+        <div class="row">
+          <div class="col s2 m2 l2">
+            <img class="images" style="width:100%"
+              src="https://cdn.pixabay.com/photo/2018/09/22/20/43/clock-3696113_960_720.jpg">
+          </div>
+          <div class="col s2 m2 l2">
+            <img class="images" style="width:100%"
+              src="https://cdn.pixabay.com/photo/2018/09/22/20/43/clock-3696118_960_720.jpg">
+
+          </div>
+        </div>
+      </div>
+      <!-- Product image end -->
+      <div class="col s12 m6 l6">
+        <!-- Product Description -->
+        <div class="product-description">
+          <h1>Watch 1</h1>
+          <p>This is some sample text and i guess the product is fantastic</p>
+        </div>
+
+        <button class="white no_of_product_btn" onclick="decrease_product()">&#45;</button>
+        <input type="number" class="browser-default no_of_product" id="no_of" disabled value="1" name="" id="">
+        <button class="white no_of_product_btn" onclick="increase_product()">+</button>
+
+
+        <div class="product-price">
+          <br>
+          <br>
+          <br>
+          <strike>12,000</strike>
+          <span class="price">10,000 ₹</span>
+          <br>
+          <br>
+          <a href="#" class="cart-btn ">Add to cart</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br> <br>
+    <br> <br>
+    <br>
 
   </section>
   <!-- Product end -->
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s4"><a href="#Description">Description</a></li>
+          <li class="tab col s4"><a class="active" href="#Reviews">Reviews</a></li>
+          <li class="tab col s4"><a href="#Additionalinformation">Additional information</a></li>
+        </ul>
+      </div>
+      <div id="Description" class="col s12 product-description"> <br><br>A watch is a timepiece intended to be carried
+        or worn by a person<br> It is designed to keep working despite the motions caused by the person's activities<br>
+        A wristwatch is designed to be worn around the wrist, attached by a watch strap or other type of bracelet<br> A
+        pocket watch is designed for a person to carry in a pocket<br> The study of timekeeping is known as
+        horology<br><br></div>
+      <div id="Additionalinformation" class="col s12 product-description center "> <br><br>
+        <div class="container">
+          <table class="responsive-table">
+            <thead>
+              <tr>
+                <th>Gender</th>
+                <td>Male</td>
+              </tr>
+            </thead>
 
-<!-- Reviews -->
-<div class="row container">
-    <div class="col s12 m6 l6">
-        <!-- <div class="row"> -->
-            <!-- <div class="col s6 l6 m6" style="text-align: center;"> -->
-                <h3 style="color: rgba(31, 29, 29, 0.692);background:#f4f4f4;padding: 15px;border-radius: 5px;border: #dddddd solid;text-align: center;;">
+            <tbody>
+              <tr>
+                <th>Brand</th>
+                <td>Titan</td>
+              </tr>
+              <tr>
+                <th>Belt type</th>
+                <td>Leather</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="Reviews" class="col s12">
+        <br>
+        <br>
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="card-panel grey lighten-5 z-depth-1 center">
+              <div class="row valign-wrapper center">
+                <div class="col s12">
+                  <span>
                     <br>
-                    <b>
-                        Overall rating
-                        <br>
-                        <span style="color: rgb(77, 119, 15);">4.0</span>/5.0
-                    </b> 
                     <br>
-                    <br>
-                </h3>
-            <!-- </div> -->
-            <!-- <div class="col s6 l6 m6">
-                    <div class="rating_list">
-                            <h4 style="margin-left: 10px;">Based on 3 Reviews</h4>
-                            <ul class="list" style="margin-left: 10px;;">
-                              <li>
-                                <a >5 Star
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                <i class="fa fa-star"></i> 01</a>
-                              </li>
-                              <li>
-                                <a >4 Star
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                <i class="fa fa-star"></i> 01</a>
-                              </li>
-                              <li>
-                                <a >3 Star
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                <i class="fa fa-star"></i> 01</a>
-                              </li>
-                              <li>
-                                <a >2 Star
-                                    <i class="material-icons">stars</i>
-                                    <i class="material-icons">stars</i>
-                                <i class="fa fa-star"></i> 01</a>
-                              </li>
-                              <li>
-                                <a >1 Star
-                                    <i class="material-icons">stars</i>
-                                    <i class="fa fa-star"></i> 01</a>
-                              </li>
-                            </ul>
-                          </div>
-            </div> -->
-        <!-- </div> -->
-    </div>
-    <div class="col s12 m6 l6">
-        <form action="" method="post" class="container">
-            <h4>Review</h4>
-            <input type="number" placeholder="Rating out of 5" min="1" max="5" style="width: 40%;" value="5">
-            <input type="text" placeholder="review">
-            <br>
-            <br>
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </div>
-
-</div>
-<!-- Review end -->
-
-<!-- Sugessions -->
-<div class="section white">
-        <div class="row parallax-row-container">
-            <!-- <h2 class="header">NEW</h2> -->
-            <p class="grey-text text-darken-3 lighten-3">
-    
-            <div class="row ">
-    
-                <div class="col s6 m6 l3" >
-                <div class="card card-height">
-                    <div class="card-image">
-                    <img
-                        src="https://n2.sdlcdn.com/imgs/a/t/b/Titan-Octane-NE9308KM01J-Men-s-SDL707385703-1-0abb8.jpg">
-                    </div>
-                    <div class="card-content">
-                    <h5>
-                        Titan watch 1
-                    </h5>
-                    </div>
-    
+                    <h3><span>5.0</span>/5.0</h3>
+                  </span>
                 </div>
-                </div>
-    
-    
-                        <div class="col s6 m6 l3" >
-                            <div class="card card-height">
-                                <div class="card-image">
-                                <img
-                                    src="http://www.aajkaadeals.com/images/products/18906.jpg" >
-                                </div>
-                                <div class="card-content">
-                                    <h5>
-                                        Titan watch 8
-                    
-                                    </h5>
-                                </div>
-                
-                            </div>
-                            </div>
-        
-                                <div class="col s6 m6 l3" >
-                                    <div class="card card-height">
-                                    <div class="card-image">
-                                        <img
-                                        src="https://watchalive.files.wordpress.com/2010/03/titan-obaku-2-web.jpg" >
-                                    </div>
-                                    <div class="card-content">
-                                        <h5>
-                                            Titan watch 11
-                        
-                                            </h5>
-                                    </div>
-                    
-                                    </div>
-                                </div>
-    
-                                <div class="col s6 m6 l3" >
-                                    <div class="card card-height">
-                                        <div class="card-image">
-                                        <img
-                                            src="https://watchalive.files.wordpress.com/2010/03/titan-obaku-2-web.jpg" >
-                                        </div>
-                                        <div class="card-content">
-                                            <h5>
-                                                Titan watch 12
-                            
-                                            </h5>
-                                        </div>
-                        
-                                    </div>
-                                    </div>
-                        
-    
+              </div>
+              <i class="material-icons medium star">star</i>
+              <i class="material-icons medium star">star</i>
+              <i class="material-icons medium star">star</i>
+              <i class="material-icons medium star">star</i>
+              <i class="material-icons medium star">star</i>
+              <br>
+              <br>
             </div>
+          </div>
         </div>
-    
-        </p>
+
+        <div class="row">
+
+          <!-- Reviews -->
+          <div class="section white">
+            <div class="row">
+              <!-- <h2 class="header">NEW</h2> -->
+              <p class="grey-text text-darken-3 lighten-3">
+
+                <div class="row ">
+
+                  <div class="col s12 m6 l6">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                      <div class="row valign-wrapper">
+                        <div class="col s2">
+                          <img src="https://cdn.pixabay.com/photo/2017/08/12/18/31/male-2634974_960_720.jpg" alt=""
+                            class="circle responsive-img"> <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s10">
+                          <span>
+                            This is a review, and also a good one
+                            This is a review, and also a good one <br>
+                            This is a review, and also a good one <br>
+                            This is a review, and also a good one <br>
+                            This is a review, and also a good one
+                            This is a review, and also a good one <br>
+                            This is a review, and also a good one <br>
+                            This is a review, and also a good one
+                            This is a review, and also a good one
+                          </span>
+                        </div>
+                      </div>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                      <div class="row valign-wrapper">
+                        <div class="col s2">
+                          <img src="https://cdn.pixabay.com/photo/2017/08/12/18/31/male-2634974_960_720.jpg" alt=""
+                            class="circle responsive-img"> <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s10">
+                          <span>
+                            This is a review, and also a good one
+                          </span>
+                        </div>
+                      </div>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                      <div class="row valign-wrapper">
+                        <div class="col s2">
+                          <img src="https://cdn.pixabay.com/photo/2017/08/12/18/31/male-2634974_960_720.jpg" alt=""
+                            class="circle responsive-img"> <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s10">
+                          <span>
+                            This is a review, and also a good one
+                          </span>
+                        </div>
+                      </div>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                      <div class="row valign-wrapper">
+                        <div class="col s2">
+                          <img src="https://cdn.pixabay.com/photo/2017/08/12/18/31/male-2634974_960_720.jpg" alt=""
+                            class="circle responsive-img"> <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s10">
+                          <span>
+                            This is a review, and also a good one
+                          </span>
+                        </div>
+                      </div>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                    </div>
+                  </div>
+
+                  <div class="col s12 m6 l6">
+                    <div class="card-panel grey lighten-5 z-depth-1">
+                      <div class="row valign-wrapper">
+                        <div class="col s2">
+                          <img src="https://cdn.pixabay.com/photo/2017/08/12/18/31/male-2634974_960_720.jpg" alt=""
+                            class="circle responsive-img"> <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s10">
+                          <span>
+                            This is a review, and also a good one
+                          </span>
+                        </div>
+                      </div>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                      <i class="material-icons star">star</i>
+                    </div>
+                  </div>
+
+
+                </div>
+            </div>
+
+            </p>
+          </div>
+          <!-- Reviews end -->
+
         </div>
-<!-- sugeesions end -->
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <form class="card-panel grey lighten-5 z-depth-1 center">
+              <div class="row valign-wrapper center">
+                <div class="col s12">
+                  <span>
+                    <h4>Write a review</h4>
+                  </span>
+                </div>
+              </div>
+
+              <ul class="rating">
+                <li>
+                  <span class="ratingSelector ">
+                    <input type="radio" name="rating" id="Degelijkheid-5-5" value="5" class="radio"  checked>
+                    <label class="full" for="Degelijkheid-5-5"></label>
+                    <input type="radio" name="rating" id="Degelijkheid-4-5" value="4" class="radio">
+                    <label class="full" for="Degelijkheid-4-5"></label>
+                    <input type="radio" name="rating" id="Degelijkheid-3-5" value="3" class="radio">
+                    <label class="full" for="Degelijkheid-3-5"></label>
+                    <input type="radio" name="rating" id="Degelijkheid-2-5" value="2" class="radio">
+                    <label class="full" for="Degelijkheid-2-5"></label>
+                    <input type="radio" name="rating" id="Degelijkheid-1-5" value="1" class="radio">
+                    <label class="full" for="Degelijkheid-1-5"></label>
+                  </span>
+                </li>
+              </ul>
+
+              <textarea class="reviewbox" name="review" id="" cols="30" rows="10"></textarea>
+              <br>
+              <br>
+              <button class="submit-btn " type="submit">Submit</button>
+              <br>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Sugessions -->
+  <div class="section white">
+    <div class="row parallax-row-container">
+      <!-- <h3 class="header center">Sugessions</h3> -->
+      <br>
+      <p class="grey-text text-darken-3 lighten-3">
+        <div class="flex-container">
+
+          <div class="card card-height">
+            <div class="card-image">
+              <img src="https://n2.sdlcdn.com/imgs/a/t/b/Titan-Octane-NE9308KM01J-Men-s-SDL707385703-1-0abb8.jpg">
+            </div>
+            <div class="card-content">
+              <h5>
+                Titan watch 1
+              </h5>
+            </div>
+          </div>
+
+
+          <div class="card card-height">
+            <div class="card-image">
+              <img src="http://www.aajkaadeals.com/images/products/18906.jpg">
+            </div>
+            <div class="card-content">
+              <h5>
+                Titan watch 8
+              </h5>
+            </div>
+
+          </div>
+
+          <div class="card card-height">
+            <div class="card-image">
+              <img src="https://watchalive.files.wordpress.com/2010/03/titan-obaku-2-web.jpg">
+            </div>
+            <div class="card-content">
+              <h5>
+                Titan watch 11
+              </h5>
+            </div>
+          </div>
+
+          <div class="card card-height">
+            <div class="card-image">
+              <img src="https://watchalive.files.wordpress.com/2010/03/titan-obaku-2-web.jpg">
+            </div>
+            <div class="card-content">
+              <h5>
+                Titan watch 12
+              </h5>
+            </div>
+          </div>
+
+        </div>
+      </p>
+    </div>
+  </div>
+  <!-- sugeesions end -->
 
   <!-- Futtor starting -->
   <footer class="page-footer" style="background-color: #000;padding-bottom: 20px">
@@ -359,28 +442,8 @@
 
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    // For nav bar  
-    $(document).ready(function () {
-      $('.sidenav').sidenav();
-    });
+  <script src="main.js"></script>
 
-    // For Popup    
-    $(document).ready(function () {
-      $('.modal').modal();
-    });
-
-    // For viewing image
-    $(document).ready(function(){
-        $('.materialboxed').materialbox();
-    });
-  </script>
-
-<script>
-  function submitSerach() {
-    alert('search')
-  }
-</script>
 </body>
 
 </html>

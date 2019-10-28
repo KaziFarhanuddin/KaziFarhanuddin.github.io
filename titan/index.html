@@ -10,161 +10,12 @@
 
   <!--Import materialize.css-->
   <link rel="stylesheet" href="materialize.min.css">
+  <link rel="stylesheet" href="main.css">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    a{
-      color: #000 ;
-    }
-    .card {
-      transition: transform .2s;
-    }
 
-    .card:hover {
-      -ms-transform: scale(0.95);
-      -webkit-transform: scale(0.95);
-      transform: scale(0.95);
-    }
-
-    .flex-container,
-    .flex-container-category {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    .flex-container>div,
-    .flex-container-category>div {
-      text-align: center;
-      line-height: 75px;
-      font-size: 30px;
-      margin: 0px;
-    }
-
-    .flex-container>div {
-      width: 25%;
-    }
-
-    .flex-container-category>div {
-      width: 33.33%;
-
-    }
-
-    .parallax-container {
-      height: 500px;
-    }
-
-    .nav-itm:hover {
-      background: rgb(48, 45, 45);
-    }
-
-    .mobal-nav-icon {
-      margin-top: 12px;
-    }
-
-    .parallax-row-container {
-      width: 70%;
-    }
-
-    .image-container {
-      position: relative;
-      text-align: center;
-      color: white;
-    }
-
-    .image-bottom-left {
-      position: absolute;
-      bottom: 8px;
-      left: 16px;
-    }
-
-    .image-top-left {
-      position: absolute;
-      top: 8px;
-      left: 16px;
-    }
-
-    .image-top-right {
-      position: absolute;
-      top: 8px;
-      right: 16px;
-    }
-
-    .image-bottom-right {
-      position: absolute;
-      bottom: 8px;
-      right: 16px;
-    }
-
-    .image-centered {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .parallax-row-container-catagory{
-      width: 80%
-    }
-    .parallax-container {
-      height: 300px;
-    }
-
-    @media only screen and (min-width: 600px) {}
-
-    @media only screen and (min-width: 600px) and (max-width: 992px) {
-
-      .flex-container>div,
-      .flex-container-category>div {
-        width: 33.33%;
-        margin: 0px;
-        text-align: center;
-        line-height: 75px;
-        font-size: 30px;
-      }
-
-      .parallax-row-container, .parallax-row-container-catagory {
-        width: 99%;
-      }
-      .parallax-image {
-        width: 100%;
-      }
-
-      .parallax-container {
-        height: 240px;
-      }
-
-    }
-
-    /* Mobile */
-    @media only screen and (max-width: 600px) {
-      .flex-container>div {
-        width: 50%;
-        margin: 0px;
-        text-align: center;
-        line-height: 75px;
-        font-size: 30px;
-      }
-      .flex-container-category>div{
-        width: 100%
-      }
-      .parallax-container {
-        height: 240px;
-      }
-
-      .parallax-image {
-        width: 100%;
-      }
-
-      .parallax-row-container, .parallax-row-container-catagory {
-        width: 99%;
-      }
-
-      .col {
-        padding: 5px !important;
-      }
-
-  </style>
 </head>
 
 <body>
@@ -574,23 +425,7 @@
 
   <!--JavaScript at end of body for optimized loading-->
   <script src="materialize.min.js"></script>
-  <script>
-    // For nav bar  
-    $(document).ready(function () {
-      $('.sidenav').sidenav();
-    });
-
-    // For Popup    
-    $(document).ready(function () {
-      $('.modal').modal();
-    });
-
-    // For Parallax
-    $(document).ready(function () {
-      $('.parallax').parallax();
-    });
-  </script>
-
+  <script src="main.js"></script>
 </body>
 
 </html>
