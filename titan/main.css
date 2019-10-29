@@ -119,8 +119,11 @@ hr{
 }
 .login-input{
   text-align: center;
+  border: 0px;
+  padding: 10px;
   font-size: 17px !important;
   width: 100% !important;
+  border-radius: 100px;
 }
 
 .chip:hover{

@@ -27,21 +27,38 @@
 // Product-detail
     let img = document.getElementById('main-img');
     var imgs = document.querySelectorAll('.images')
-    let no_of = document.getElementById('no_of')
     function changeImg(src) {
-    img.src=src
+        img.src=src
     }
     for(i=0; i<imgs.length; i++) {
         let v = imgs[i].src;
         imgs[i].addEventListener("click", function(){changeImg(v)}, false);
     }
-    function decrease_product() {
-    if (Number(no_of.value) > 1){
-        no_of.value = Number(no_of.value)-1
+    function decrease_product(opt) {
+        if (opt!=undefined){
+            var s = 'no_of_'+opt;
+            let no_of = document.getElementById(s.toString())
+            if (Number(no_of.value) > 1){
+                no_of.value = Number(no_of.value)+1        
+            }
+        }
+        else{
+            let no_of = document.getElementById('no_of')
+            if (Number(no_of.value) > 1){
+                no_of.value = Number(no_of.value)-1
+            }
+        }
     }
-    }
-    function increase_product() {
-    no_of.value = Number(no_of.value) + 1        
+    function increase_product(opt) {
+        if (opt!=undefined){
+            var s = 'no_of_'+opt;
+            let no_of = document.getElementById(s)
+            no_of.value = Number(no_of.value)+1
+        }
+        else{
+            let no_of = document.getElementById('no_of')
+            no_of.value = Number(no_of.value) + 1        
+        }
     }
     // For tabs
     $(document).ready(function(){
