@@ -10,7 +10,7 @@ h3, h4 {
     font-family: Poppins-Bold;
 }
 hr{
-    color: #efefef;
+    color: #dadada73;
 }
 
 #main-img{
@@ -39,26 +39,43 @@ hr{
     width: 60px;
     height: 60px;
 }
-.card, .card-panel, #main-img, .cart-btn, .submit-btn {
+.card, .card-panel, #main-img, .cart-btn, .submit-btn, .coupone-btn {
   transition: transform .2s;
 }
-.card:hover, .card-panel:hover {
+.card:hover, .card-panel:hover, .coupone-btn:hover {
   -ms-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
+.cart-btn, .submit-btn , .coupone-btn{
+  display: inline-block;
+  background-color: #7DC855;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
 .cart-btn, .submit-btn {
-    display: inline-block;
-    background-color: #7DC855;
-    border-radius: 6px;
-    font-size: 16px;
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 12px 30px;
-    transition: all .5s;
+  border-radius: 6px;
+}
+.coupone-btn{
+  border: 0px;
+  border-radius: 100px;
 }
 .cart-btn:hover, .submit-btn:hover {
   background-color: #64af3d;
+}
+.cart-text{
+  font-size: 20px;
+  font-weight: 350;
+  color: rgb(91, 98, 104);
+  line-height: 24px;
+}
+.cart-panel{
+  padding: 24px;
+  margin: .5rem 0 .2rem 0;
+  border-radius: 2px;
 }
 
 /* #F */
@@ -202,6 +219,10 @@ hr{
     font-weight: 500;
     margin-right: 20px;
 }
+.cart-product-img{
+  height: 100% ;
+}
+
 /* #R */
 .rating input { display: none; } 
 .rating label:before { 
@@ -288,7 +309,9 @@ text-align: center;}
   .parallax-container {
     height: 240px;
   }
-
+  .m-s-blank{
+    height: 50px;
+  }
 }
 
 /* Mobile */
@@ -319,5 +342,8 @@ text-align: center;}
   }
   .col {
     padding: 5px !important;
+  }
+  .m-s-blank{
+    height: 50px;
   }
 }
