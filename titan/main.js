@@ -15,6 +15,15 @@
         $('.parallax').parallax();
     });
 
+// For Filter
+    $(document).ready(function(){
+        $("#filter-btn").click(function(){  
+            $("#filter-div").animate({
+                height: 'toggle',
+            }, "slow");
+        });
+    });
+
 // Product-detail
     let img = document.getElementById('main-img');
     var imgs = document.querySelectorAll('.images')
@@ -38,3 +47,4 @@
     $(document).ready(function(){
     $('.tabs').tabs();
     });
+
