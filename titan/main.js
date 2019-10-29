@@ -39,7 +39,7 @@
             var s = 'no_of_'+opt;
             let no_of = document.getElementById(s.toString())
             if (Number(no_of.value) > 1){
-                no_of.value = Number(no_of.value)+1        
+                no_of.value = Number(no_of.value)-1        
             }
         }
         else{
