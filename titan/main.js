@@ -48,3 +48,14 @@
     $('.tabs').tabs();
     });
 
+// Add to Favouret
+document.getElementById('favouret-icon').addEventListener("click", change_favouret_icon)
+function change_favouret_icon() {
+    let icon = document.getElementById('favouret-icon').innerHTML
+    if (icon == 'favorite_border'){
+        document.getElementById('favouret-icon').innerHTML = "favorite";
+    }
+    else{
+        document.getElementById('favouret-icon').innerHTML = "favorite_border";
+    }
+}

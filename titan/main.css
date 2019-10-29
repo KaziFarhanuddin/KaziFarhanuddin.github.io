@@ -95,6 +95,14 @@ hr{
 .flex-container-category>div {
   width: 33.33%;
 } 
+.favouret-btn{
+  margin-left: 15px;
+}
+.favouret-icon{
+  cursor:pointer;
+  font-size: 35px;
+  color: red;
+}
 
 .chip:hover{
   background: #99a3f1;
